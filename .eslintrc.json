@@ -12,7 +12,6 @@
     }
   },
   "rules": {
-    // FIX: function style doesnt produce vscode error
     "func-style": ["error", "declaration"],
     "prettier/prettier": "error"
   }
