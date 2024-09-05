@@ -1,0 +1,19 @@
+{
+  "extends": ["prettier", "preact"],
+  "plugins": ["@babel", "prettier"],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    // FIX: function style doesnt produce vscode error
+    "func-style": ["error", "declaration"],
+    "prettier/prettier": "error"
+  }
+}
