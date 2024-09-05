@@ -1,0 +1,7 @@
+{
+  "plugins": ["prettier-plugin-jsdoc"],
+  "printWidth": 88,
+  "singleQuote": true,
+  "jsdocDescriptionWithDot": true,
+  "jsdocPreferCodeFences": true
+}
