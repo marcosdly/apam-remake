@@ -1,0 +1,16 @@
+.font-sans {
+  font-family: 'Alexandria', system-ui, sans;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-serif {
+  font-family: 'Fraunces', serif;
+  font-optical-sizing: auto;
+  font-weight: 400; // default
+  font-style: normal;
+  font-variation-settings:
+    'SOFT' 0,
+    'WONK' 0;
+}
