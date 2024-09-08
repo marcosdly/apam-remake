@@ -1,44 +1,15 @@
-// NOTE: COLORS WHERE SET BY A UI DESIGNER
-// NOTE: VARIABLE NAMES DO NOT REPRESENT COLOR CODES *EXACTLY*
+@use './lib/color' as color;
 
-$red: #e94250;
-$orange: #ee7666;
-$yellow: #f0be8a;
-$light-lavender: #dcc8e2;
-$champagne: #f2dfd7;
-$pastel-green: #93a683;
-$blue: #244391;
-$ocean-green: #3697b2;
-$green: #1f5b5c;
-$white: #e2e2e2;
-$black: #222222;
+@each $name, $hex in color.$by-name {
+  .text-#{$name} {
+    color: $hex;
+  }
 
-$by-name: (
-  red: $red,
-  orange: $orange,
-  yellow: $yellow,
-  light-lavender: $light-lavender,
-  champagne: $champagne,
-  pastel-green: $pastel-green,
-  blue: $blue,
-  ocean-green: $ocean-green,
-  green: $green,
-  white: $white,
-  black: $black,
-);
+  .bg-#{$name} {
+    background-color: $hex;
+  }
 
-@mixin utility-classes {
-  @each $name, $hex in $by-name {
-    .text-#{$name} {
-      color: $hex;
-    }
-
-    .bg-#{$name} {
-      background-color: $hex;
-    }
-
-    .border-#{$name} {
-      border-color: $hex;
-    }
+  .border-#{$name} {
+    border-color: $hex;
   }
 }

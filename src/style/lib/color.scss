@@ -1,0 +1,28 @@
+// NOTE: COLORS WHERE SET BY A UI DESIGNER
+// NOTE: VARIABLE NAMES DO NOT REPRESENT COLOR CODES *EXACTLY*
+
+$red: #e94250;
+$orange: #ee7666;
+$yellow: #f0be8a;
+$light-lavender: #dcc8e2;
+$champagne: #f2dfd7;
+$pastel-green: #93a683;
+$blue: #244391;
+$ocean-green: #3697b2;
+$green: #1f5b5c;
+$white: #e2e2e2;
+$black: #222222;
+
+$by-name: (
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  light-lavender: $light-lavender,
+  champagne: $champagne,
+  pastel-green: $pastel-green,
+  blue: $blue,
+  ocean-green: $ocean-green,
+  green: $green,
+  white: $white,
+  black: $black,
+);
