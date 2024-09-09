@@ -1,0 +1,68 @@
+@use '../../../style/lib/screen' as screen;
+@use '../../../style/lib/color' as color;
+
+#page-header {
+  & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .logo-container {
+    & {
+      pointer-events: none;
+    }
+
+    .full-logo,
+    .small-logo {
+      height: 3rem;
+      filter: hex-to-filter(color.$white);
+    }
+
+    .small-logo {
+      display: none;
+    }
+
+    @include screen.small {
+      .full-logo {
+        display: none;
+      }
+    }
+  }
+
+  .nav-links {
+    .link {
+      display: inline;
+    }
+
+    .link:not(:first-child) {
+      margin-left: 2rem;
+    }
+
+    .anchor {
+      & {
+        font-weight: bold;
+        text-transform: capitalize;
+        color: color.$white;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        position: relative;
+      }
+
+      &.active {
+        color: color.$red;
+      }
+
+      &.active::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        bottom: -5px;
+        left: 0;
+        position: absolute;
+        background-color: color.$red;
+      }
+    }
+  }
+}
