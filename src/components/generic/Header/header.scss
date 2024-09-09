@@ -1,5 +1,7 @@
 @use '../../../style/lib/screen' as screen;
 @use '../../../style/lib/color' as color;
+@use '../../../style/lib/number' as number;
+@use 'sass:math';
 
 #page-header {
   & {
@@ -62,6 +64,84 @@
         left: 0;
         position: absolute;
         background-color: color.$red;
+      }
+    }
+  }
+
+  .hamburger-menu {
+    $size: 2rem;
+    $tick-size: 5px;
+
+    // positions relative to (x: 0, y: 0) of this class' element
+    $top-position: calc($tick-size * 2 * -1);
+    $middle-position: calc($tick-size * 2);
+    $bottom-position: calc($tick-size * 2);
+
+    // $size-unitless: number.strip-units($size);
+    // $pythagoras-unitless: calc(math.sqrt(math.pow($size-unitless, 2) * 2));
+    // $pythagoras: calc($pythagoras-unitless * 1rem);
+
+    & {
+      @include screen.any {
+        display: none;
+      }
+
+      @include screen.medium {
+        display: flex;
+        align-items: center;
+      }
+
+      & {
+        width: $size;
+        height: $size;
+      }
+    }
+
+    .indicator {
+      &,
+      &::before,
+      &::after {
+        width: 100%;
+        height: $tick-size;
+        border-radius: calc($tick-size/2);
+        background-color: color.$white;
+      }
+
+      & {
+        position: relative;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+      }
+
+      &::before {
+        // second tick from top to bottom
+        top: $top-position;
+      }
+
+      &::after {
+        // last tick (third) from top to bottom
+        top: $bottom-position;
+      }
+
+      &.active {
+        background-color: transparent;
+      }
+
+      &.active::before,
+      &.active::after {
+        top: 0;
+      }
+
+      &.active::before {
+        rotate: 45deg;
+      }
+
+      &.active::after {
+        rotate: -45deg;
       }
     }
   }
