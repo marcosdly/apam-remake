@@ -4,13 +4,7 @@ import smallLogo from '../../../../assets/notext-logo-optimized.svg';
 import RedirectButton from '../RedirectButton';
 import './header.scss';
 
-function LinkContainer({ children }) {
-  return (
-    <nav className="nav-links font-sans">
-      <ol>{children}</ol>
-    </nav>
-  );
-}
+/** @typedef {import('preact/compat')} React */
 
 /**
  * @typedef LinkProps
@@ -20,7 +14,7 @@ function LinkContainer({ children }) {
 
 /** @param {LinkProps} props */
 function Link(props) {
-  /** @type {import('preact').RefObject<HTMLAnchorElement>} */
+  /** @type {React.RefObject<HTMLAnchorElement>} */
   const anchor = useRef();
 
   return (
@@ -33,6 +27,31 @@ function Link(props) {
 }
 
 export default function Header() {
+  /** @type {React.RefObject<HTMLElement>} */
+  const nav = useRef();
+
+  function LinkContainer({ children }) {
+    return (
+      <nav ref={nav} className="nav-links font-sans">
+        <ol>{children}</ol>
+      </nav>
+    );
+  }
+
+  function HamburgerMenu() {
+    return (
+      <div className="hamburger-menu">
+        <div
+          onClick={(ev) => {
+            ev.currentTarget?.classList.toggle('active');
+            nav.current?.classList.toggle('active');
+          }}
+          className="indicator"
+        />
+      </div>
+    );
+  }
+
   return (
     <div id="page-header">
       <div className="logo-container">
@@ -46,6 +65,7 @@ export default function Header() {
         <Link href="/campanhas" text="Campanhas" />
       </LinkContainer>
       <RedirectButton href="/doar" text="Doar" shape="pill" color="ocean-green" />
+      <HamburgerMenu />
     </div>
   );
 }
