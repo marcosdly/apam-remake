@@ -36,6 +36,13 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    test: {
+      server: { sourcemap: true },
+      environmentMatchGlobs: [
+        ['./src/components/**', 'jsdom'],
+        ['./src/pages/**', 'jsdom'],
+      ],
+    },
   };
 
   if (mode === 'production') {
