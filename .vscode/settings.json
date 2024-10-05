@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "explorer.sortOrder": "type",
+  "explorer.sortOrderLexicographicOptions": "lower",
+  "editor.rulers": [88]
+}
