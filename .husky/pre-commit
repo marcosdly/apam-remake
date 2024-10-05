@@ -1,4 +1,6 @@
-npm run format
+STAGED="$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')"
+
+echo "$STAGED" | xargs npx prettier --write --ignore-unknown
 
 # Checkout
 git update-index --again
