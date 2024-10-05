@@ -1,0 +1,15 @@
+{
+  "name": "apam-remake",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "2.9.1",
+    "hex-to-css-filter": "5.4.0",
+    "sass": "1.79.4",
+    "vite": "5.4.8",
+    "vite-plugin-minify": "2.0.0"
+  }
+}
