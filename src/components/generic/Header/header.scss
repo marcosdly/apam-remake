@@ -1,6 +1,5 @@
 @use '../../../style/lib/screen' as screen;
 @use '../../../style/lib/color' as color;
-@use '../../../style/lib/number' as number;
 @use 'sass:math';
 
 #page-header {
@@ -124,10 +123,6 @@
     $top-position: calc($tick-size * 2 * -1);
     $middle-position: calc($tick-size * 2);
     $bottom-position: calc($tick-size * 2);
-
-    // $size-unitless: number.strip-units($size);
-    // $pythagoras-unitless: calc(math.sqrt(math.pow($size-unitless, 2) * 2));
-    // $pythagoras: calc($pythagoras-unitless * 1rem);
 
     & {
       @include screen.any {
