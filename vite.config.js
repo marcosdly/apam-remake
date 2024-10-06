@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { hexToCSSFilter } from 'hex-to-css-filter';
 import { SassString } from 'sass';
 const { assign } = Object;
@@ -20,7 +21,7 @@ const customSassFunctions = {
 export default defineConfig(({ mode }) => {
   /** @type {UserConfig} */
   const defaultConfig = {
-    plugins: [preact()],
+    plugins: [preact(), tsconfigPaths()],
     build: {
       outDir: './build/dev',
       assetsDir: '',

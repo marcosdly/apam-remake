@@ -18,6 +18,7 @@
     "sass": "1.79.4",
     "vite": "5.4.8",
     "vite-plugin-minify": "2.0.0",
+    "vite-tsconfig-paths": "5.0.1",
     "vitest": "2.1.2"
   }
 }

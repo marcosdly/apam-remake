@@ -14,7 +14,10 @@
     "paths": {
       "react": ["./node_modules/preact/compat/"],
       "react-dom": ["./node_modules/preact/compat/"],
-      "@/*": ["./src/*"],
+      "components/*": ["./src/components/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "lib/*": ["./src/lib/*"],
+      "types/*": ["./src/types/*"],
       "public/*": ["./public/*"],
       "assets/*": ["./assets/*"]
     }
