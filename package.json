@@ -20,5 +20,9 @@
     "vite-plugin-minify": "2.0.0",
     "vite-tsconfig-paths": "5.0.1",
     "vitest": "2.1.2"
+  },
+  "dependencies": {
+    "preact": "10.24.2",
+    "preact-iso": "2.6.3"
   }
 }
