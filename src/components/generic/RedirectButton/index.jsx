@@ -1,8 +1,8 @@
 import { useRef } from 'preact/hooks';
 import './redirect-button.scss';
 
-/** @typedef {import('types/style.d.ts').ColorOption} ColorOption */
-/** @typedef {import('preact/compat')} React */
+/** @import {ColorOption} from 'types/style' */
+/** @import * as React from 'preact/compat' */
 
 /**
  * @typedef RedirectButtonProps

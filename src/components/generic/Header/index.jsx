@@ -4,7 +4,7 @@ import smallLogo from 'assets/notext-logo-optimized.svg';
 import RedirectButton from 'components/generic/RedirectButton';
 import './header.scss';
 
-/** @typedef {import('preact/compat')} React */
+/** @import * as React from 'preact/compat' */
 
 /**
  * @typedef LinkProps
