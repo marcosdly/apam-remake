@@ -1,7 +1,7 @@
 import { useRef } from 'preact/hooks';
-import fullLogo from '../../../../assets/full-logo-optimized.svg';
-import smallLogo from '../../../../assets/notext-logo-optimized.svg';
-import RedirectButton from '../RedirectButton';
+import fullLogo from 'assets/full-logo-optimized.svg';
+import smallLogo from 'assets/notext-logo-optimized.svg';
+import RedirectButton from 'components/generic/RedirectButton';
 import './header.scss';
 
 /** @typedef {import('preact/compat')} React */

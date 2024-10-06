@@ -1,5 +1,5 @@
-@use '../../../style/lib/screen' as screen;
-@use '../../../style/lib/color' as color;
+@use 'src/style/lib/screen' as screen;
+@use 'src/style/lib/color' as color;
 @use 'sass:math';
 
 #page-header {
