@@ -1,0 +1,8 @@
+.fi {
+  height: fit-content;
+  width: fit-content;
+}
+
+.fi::before {
+  display: block;
+}
