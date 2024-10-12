@@ -1,6 +1,12 @@
+@use 'src/style/lib/sizing' as sizing;
+
 .page .section {
   & {
     height: 100vh;
+  }
+
+  .content {
+    width: sizing.$max-article-width;
   }
 
   &,
