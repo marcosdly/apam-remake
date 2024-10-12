@@ -29,7 +29,7 @@ export default function Intro() {
   );
 
   return (
-    <div className="intro bg-orange">
+    <div className="intro bg-orange section">
       <div className="interactive-content">
         {textContent}
         {visualContent}

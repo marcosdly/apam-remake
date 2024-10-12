@@ -5,13 +5,6 @@
   .intro {
     $column-size: 520px;
 
-    & {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
     .interactive-content {
       max-width: sizing.$max-article-width;
       display: flex;
