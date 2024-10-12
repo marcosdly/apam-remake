@@ -1,0 +1,65 @@
+@use 'src/style/lib/sizing' as sizing;
+@use 'src/style/lib/spacing' as spacing;
+
+.page.home {
+  .intro {
+    $column-size: 520px;
+
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .interactive-content {
+      max-width: sizing.$max-article-width;
+      display: flex;
+      column-gap: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-content {
+      & {
+        max-width: $column-size;
+        display: inline-flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+      }
+
+      .title {
+        font-size: 88px;
+        line-height: 1;
+        font-weight: bold;
+      }
+
+      .motive {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .buttons {
+        display: flex;
+        column-gap: 2rem;
+      }
+    }
+
+    .visual-content {
+      & {
+        width: $column-size;
+        height: $column-size;
+        display: inline-flex;
+        justify-content: center;
+        align-items: end;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .picture {
+        display: block;
+        max-height: $column-size;
+      }
+    }
+  }
+}
