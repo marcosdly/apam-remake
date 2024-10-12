@@ -1,5 +1,10 @@
-import Header from 'components/generic/Header';
+import Intro from 'components/Home/Intro';
+import './home.scss';
 
 export default function Home() {
-  return <Header />;
+  return (
+    <div className="page home">
+      <Intro />
+    </div>
+  );
 }
