@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import './style/normalize.scss';
 import './style/fonts.scss';
 import './style/color.scss';
+import '@flaticon/flaticon-uicons/css/brands/all.css';
+import '@flaticon/flaticon-uicons/css/regular/rounded.css';
+import './style/icons.scss';
 
 export function App() {
   return (
