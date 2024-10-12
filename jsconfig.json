@@ -15,6 +15,7 @@
       "react": ["./node_modules/preact/compat/"],
       "react-dom": ["./node_modules/preact/compat/"],
       "components/*": ["./src/components/*"],
+      "style/*": ["./src/style/*"],
       "hooks/*": ["./src/hooks/*"],
       "lib/*": ["./src/lib/*"],
       "types/*": ["./src/types/*"],
