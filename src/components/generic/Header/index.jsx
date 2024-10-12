@@ -19,7 +19,7 @@ function Link(props) {
 
   return (
     <li onClick={() => anchor.current?.classList.toggle('active')} className="link">
-      <a ref={anchor} className="anchor" href={props.href}>
+      <a ref={anchor} className="anchor font-bold" href={props.href}>
         {props.text}
       </a>
     </li>

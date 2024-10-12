@@ -25,7 +25,7 @@ export default function RedirectButton(props) {
       className={`redirect-button font-sans ${shape} bg-${color}`}
       onClick={() => link.current?.click?.()}
     >
-      <a ref={link} className="link" href={href}>
+      <a ref={link} className="link font-bold" href={href}>
         {text}
       </a>
     </button>
