@@ -6,10 +6,9 @@
     $column-size: 520px;
 
     .interactive-content {
-      max-width: sizing.$max-article-width;
+      width: sizing.$max-article-width;
       display: flex;
-      column-gap: 3rem;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
 
