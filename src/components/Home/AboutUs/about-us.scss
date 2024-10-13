@@ -1,0 +1,83 @@
+@use 'src/style/lib/sizing' as sizing;
+@use 'src/style/lib/color' as color;
+
+$card-gap: 0.5rem;
+$heading-gap: 2.5rem;
+$text-gap: 2rem;
+
+.page.home .about-us {
+  .board {
+    // Designed size is merely 31:22 aspect ratio.
+    // Sizing and spacig of images is way more important
+    // to the layout's final form.
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.8rem;
+
+    &:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+
+    .icon {
+      font-size: 1.25rem;
+    }
+
+    .text {
+      display: inline;
+    }
+  }
+
+  .board-column {
+    & {
+      width: 390px;
+      font-size: 1.25rem;
+      line-height: 1;
+      height: 80%;
+    }
+
+    > .text {
+      margin-bottom: $text-gap;
+    }
+
+    > .title {
+      margin-bottom: $heading-gap;
+      line-height: 1;
+      font-size: 55px;
+    }
+  }
+
+  .mission {
+    .duty-icon {
+      font-size: 24px;
+      margin: 0 1rem;
+    }
+
+    .duty {
+      & {
+        list-style: none;
+        border-radius: 10px;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+      }
+
+      &:not(:first-child) {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
